@@ -8,77 +8,48 @@
         /* Body Styling */
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(45deg, #ff6f61, #6a11cb, #2575fc);
-            background-size: 400% 400%;
-            animation: gradient 10s ease infinite;
+            background-color: black;
+            color: white;
             margin: 0;
             padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
         }
 
-        /* Container Styling */
-        .container {
-            text-align: center;
-            padding: 100px;
-            margin-top: 100px;
-            color: white;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Animated Heading */
-        .animated-text {
-            font-size: 48px;
+        /* Heading Styling */
+        h1 {
+            font-size: 60px;
             font-weight: bold;
             text-transform: uppercase;
-            animation: bounce 2s infinite;
-        }
-
-        /* Animated Paragraph */
-        .animated-text:nth-child(2) {
-            font-size: 24px;
+            text-align: center;
             animation: fadeIn 3s ease-in-out infinite;
         }
 
-        /* Animated Button */
-        .animated-button {
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            background-color: #ff9800;
-            border: none;
-            border-radius: 10px;
+        /* Snowfall Animation */
+        .snowflake {
+            position: absolute;
+            top: -10px;
             color: white;
-            cursor: pointer;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            animation: pulse 2s infinite;
+            font-size: 24px;
+            user-select: none;
+            animation: snowfall 10s linear infinite;
         }
 
-        /* Button Hover Effect */
-        .animated-button:hover {
-            background-color: #e68900;
-            transform: scale(1.1);
-        }
-
-        /* Keyframe Animations */
-
-        /* Gradient animation */
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Bounce Effect for Heading */
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
+        /* Keyframe for Snowfall */
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-10px);
             }
-            50% {
-                transform: translateY(-20px);
+            100% {
+                transform: translateY(100vh);
             }
         }
 
-        /* Fade In Effect for Paragraph */
+        /* Keyframe for Fade-in Animation */
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -87,23 +58,16 @@
                 opacity: 1;
             }
         }
-
-        /* Pulse Effect for Button */
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.2);
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="animated-text">Welcome to Badal Akash's World!</h1>
-        <p class="animated-text">This is a fun and animated page with colorful effects!</p>
-        <button class="animated-button">Click Me</button>
-    </div>
+    <h1>Badal Akash</h1>
+
+    <!-- Snowflakes Animation -->
+    <div class="snowflake" style="left: 10%; animation-duration: 12s;"></div>
+    <div class="snowflake" style="left: 30%; animation-duration: 8s;"></div>
+    <div class="snowflake" style="left: 50%; animation-duration: 10s;"></div>
+    <div class="snowflake" style="left: 70%; animation-duration: 15s;"></div>
+    <div class="snowflake" style="left: 90%; animation-duration: 13s;"></div>
 </body>
 </html>
