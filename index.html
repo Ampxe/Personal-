@@ -3,88 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be Mine?</title>
+    <title>Badal Akash</title>
     <style>
-        /* General styles */
-        * {
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ff6f61, #6a11cb, #2575fc);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            height: 100vh;
-            background: linear-gradient(135deg, #ff7eb3, #ff758c);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            overflow: hidden;
-        }
-
+        /* Container Styling */
         .container {
             text-align: center;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 100px;
+            margin-top: 100px;
+            color: white;
             border-radius: 15px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            animation: fadeIn 2s ease;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            color: #ffd700;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        /* Animated Heading */
+        .animated-text {
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: bounce 2s infinite;
         }
 
-        p {
-            font-size: 1.2em;
-            line-height: 1.5;
-            margin-bottom: 20px;
-            color: #fff;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        /* Animated Paragraph */
+        .animated-text:nth-child(2) {
+            font-size: 24px;
+            animation: fadeIn 3s ease-in-out infinite;
         }
 
-        footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: rgba(255, 255, 255, 0.7);
+        /* Animated Button */
+        .animated-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #ff9800;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
         }
 
-        footer a {
-            color: #ffd700;
-            text-decoration: none;
+        /* Button Hover Effect */
+        .animated-button:hover {
+            background-color: #e68900;
+            transform: scale(1.1);
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        /* Keyframe Animations */
+
+        /* Gradient animation */
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
+        /* Bounce Effect for Heading */
+        @keyframes bounce {
+            0%, 100% {
                 transform: translateY(0);
             }
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
-        /* Heart animation */
-        .heart {
-            position: absolute;
-            bottom: 10%;
-            right: 10%;
-            font-size: 4em;
-            color: #ff4081;
-            animation: pulse 1s infinite;
+        /* Fade In Effect for Paragraph */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
 
+        /* Pulse Effect for Button */
         @keyframes pulse {
             0%, 100% {
                 transform: scale(1);
@@ -97,16 +101,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>Will You Be Mine?</h1>
-        <p>
-            Hi, I’ve seen you in class, and I couldn’t help but admire you from afar. <br>
-            You have a beautiful aura, and I’d love to get to know you better. <br>
-            This is my way of sharing my feelings. ❤️
-        </p>
-        <footer>
-            <p>From someone who deeply admires you. <br> If you'd like, you can talk to me anytime!</p>
-        </footer>
+        <h1 class="animated-text">Welcome to Badal Akash's World!</h1>
+        <p class="animated-text">This is a fun and animated page with colorful effects!</p>
+        <button class="animated-button">Click Me</button>
     </div>
-    <div class="heart">💖</div>
 </body>
 </html>
